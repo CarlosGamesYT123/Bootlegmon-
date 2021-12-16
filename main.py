@@ -1,7 +1,9 @@
+
 import random as r
 import time as t
 import sys as sus
-import pygame as game
+from replit import audio
+
 
 evolve = r.randint(1, 40)
 grooky_health = 50
@@ -39,10 +41,12 @@ elif x == 4:
     print("You encountered a tough looking drednaw")
 elif x == 5:
     print("You encountered a wild WOAH WHAT THE A WILD ETERNATUS")
+audio.play_file('pokemon.wav',1)
 while x == 2:
     wooloo = r.randint(1, 4)
     answer = input("fight/catch/pokemon/run ")
     if answer == "fight" and starter == "sobble" and x == 2:
+    
         print("what move do you want to use")
         print("pound")
         print("sucker punch")
@@ -57,20 +61,20 @@ while x == 2:
             wooloo_health -= 40
         if wooloo == 4:
             print("wooloo used Double-Edge")
-            sobble_health -= 120
+            sobble_health -= 23
         elif wooloo == 1:
             print("wooloo used take down")
-            sobble_health -= 90
+            sobble_health -= 12
         elif wooloo == 2:
             print("wooloo used tackle")
-            sobble_health -= 40
+            sobble_health -= 8
         elif wooloo == 3:
             print("wooloo used headbutt")
-            sobble_health -= 70
+            sobble_health -= 20
         if sobble_health <= 0:
+            audio.play_file('oof.wav',1)
             print("you have no pokemon that can fight")
             sus.exit(':(')
-            break
         if wooloo_health <= 0:
             print("The wild wooloo fainted we'll get em next time")
             break
