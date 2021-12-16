@@ -44,7 +44,7 @@ elif x == 5:
 audio.play_file('pokemon.wav',1)
 while x == 2:
     wooloo = r.randint(1, 4)
-    answer = input("fight/catch/pokemon/run ")
+    answer = input("fight/catch/run ")
     if answer == "fight" and starter == "sobble" and x == 2:
     
         print("what move do you want to use")
