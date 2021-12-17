@@ -58,12 +58,18 @@ while x == 2:
         print("water gun")
         print("water pulse")
         fight = input()
+        if fight == "pound":
+          print("that did 4 damage")
+          wooloo_health -= 4
+        if fight == "sucker punch":
+          print("that did 30 damage")
+          wooloo_health -= 30
         if fight == "water pulse":
-            print("that did 60 damage")
-            wooloo_health -= 60
+            print("that did 20 damage")
+            wooloo_health -= 20
         if fight == "water gun":
-            print("that did 40 hp")
-            wooloo_health -= 40
+            print("that did 10 hp")
+            wooloo_health -= 10
         if wooloo == 4:
             print("wooloo used Double-Edge")
             sobble_health -= 23
@@ -101,7 +107,7 @@ while x == 2:
       print("you have 10 ultra balls")
       print("you have 1 master ball")
       bag = input("what do you want to use ")
-      if bag == "potion" and sobble_health >= 30:
+      if bag == "potion" and sobble_health <= 30:
         print("healed pokemon")
         sobble_health += 20
       elif bag == "potion" and sobble_health == 31:
