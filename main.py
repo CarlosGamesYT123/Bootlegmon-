@@ -208,7 +208,7 @@ while x == 2:
         great_ball -= 1
         print("close!")
       elif bag == "great ball" and great_balls == 3:
-        ultra_ball -= 1
+        great_ball -= 1
         print("Aw that was So close!")
       elif great_ball <= 0:
         print("you can't use that you have no more!")
@@ -713,7 +713,7 @@ while x == 4:
         potions -= 1
       elif bag4 == "potion" and sobble_health == 50:
         print("your pokemon is at full health")
-      elif bag == "master ball" and master_ball == 1:
+      elif bag4 == "master ball" and master_ball == 1:
         print("gotcha drednaw was caught!")
         sus.exit
       elif bag4 == "ultra ball" and ultra_balls == 1:
@@ -725,11 +725,11 @@ while x == 4:
       elif bag == "great ball" and great_balls == 1:
         print("gotcha drednaw was caught!")
         sus.exit
-      elif bag == "great ball" and great_balls == 2:
+      elif bag4 == "great ball" and great_balls == 2:
         great_ball -= 1
         print("close!")
       elif bag4 == "great ball" and great_balls == 3:
-        ultra_ball -= 1
+        great_ball -= 1
         print("Aw that was So close!")
       elif great_ball <= 0:
         print("you can't use that you have no more!")
