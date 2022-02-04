@@ -63,7 +63,7 @@ while True:
 print("you head into the tall grass and you encountered a wild pokemon")
 source.set_paused(True)
 t.sleep(4)
-x = r.randint(2, 2)
+x = r.randint(1, 1)
 if x == 1:
     print("You encountered a wild pickachu")
 elif x == 2:
@@ -251,7 +251,7 @@ while x == 2 and starter == "sobble" :
             print("you can't use that you have no more!")
         elif potions <= 0:
             print("you can't use that you have no more!")
-while x == 1:
+while x == 1 and starter == sobble:
     master_ball2 = r.randint(1, 1)
     ultra_balls2 = r.randint(1, 2)
     great_balls2 = r.randint(1, 3)
@@ -1154,16 +1154,16 @@ while x == 1 and starter == "scorbunny":
             print("that did 20 hp")
             pickachu_health -= 10
         if pickachu2 == 4:
-            print("wooloo used Double-Edge")
+            print("pickachu used iron tail")
             scorbunny_health -= 23
         elif pickachu2 == 1:
-            print("wooloo used take down")
+            print("pickachu used thunder bolt")
             scorbunny_health -= 12
         elif pickachu2 == 2:
-            print("wooloo used tackle")
+            print("pickachu used electro web")
             scorbunny_health -= 8
         elif pickachu2 == 3:
-            print("wooloo used headbutt")
+            print("pickachu used electro ball")
             scorbunny_health -= 20
         if scorbunny_health <= 0:
             audio.play_file('oof.wav', 1)
@@ -1172,18 +1172,18 @@ while x == 1 and starter == "scorbunny":
         if pickachu_health <= 0:
             print("The wild wooloo fainted we'll get em next time")
             break
-    elif answer6 == "catch" and catch == 1:
+    elif answer7 == "catch" and catch == 1:
         print("gotcha pickachu was caught!")
         break
-    elif answer6 == "catch" and catch6 == 2:
+    elif answer7 == "catch" and catch6 == 2:
         print("close!")
-    elif answer6 == "catch" and catch6 == 3:
+    elif answer7 == "catch" and catch6 == 3:
         print("Aw that was So close!")
-    elif answer6 == "catch" and catch6 == 4:
+    elif answer7 == "catch" and catch6 == 4:
         print("That was so close keep it up!")
-    elif answer6 == "catch" and catch6 == 5:
+    elif answer7 == "catch" and catch6 == 5:
         print("Ok now that was way to close!")
-    elif answer6 == "bag":
+    elif answer7 == "bag":
         print("you have " + str(potions) + " potions")
         print("you have " + str(great_ball) + " great balls")
         print("you have " + str(ultra_ball) + " ultra balls")
