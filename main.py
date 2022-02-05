@@ -12,6 +12,14 @@ drednaw_health = 80
 pickachu_health = 35
 wooloo_health = 42
 eternatus_health = 140
+grooky_health = 50
+scorbunny_health = 50
+sobble_health = 50
+nicket_health = 40
+drednaw_health = 80
+pickachu_health = 35
+wooloo_health = 42
+eternatus_health = 140
 potions = 20
 master_balls = 1
 ultra_ball = 10
@@ -63,7 +71,7 @@ while True:
 print("you head into the tall grass and you encountered a wild pokemon")
 source.set_paused(True)
 t.sleep(4)
-x = r.randint(1, 1)
+x = r.randint(5, 5)
 if x == 1:
     print("You encountered a wild pickachu")
 elif x == 2:
@@ -74,7 +82,7 @@ elif x == 4:
     print("You encountered a tough looking drednaw")
 elif x == 5:
     print("You encountered a wild WOAH WHAT THE A WILD ETERNATUS")
-audio.play_file('pokemon.wav', 1)
+fight_music = audio.play_file('pokemon.wav', 1)
 while x == 2 and starter == "sobble" :
     master_ball = r.randint(1, 1)
     ultra_balls = r.randint(1, 2)
@@ -426,7 +434,7 @@ while x == 1 and starter == 'sobble':
             print("you can't use that you have no more!")
         elif potions <= 0:
             print("you can't use that you have no more!")
-while x == 3:
+while x == 3 and starter == "sobble":
     master_ball3 = r.randint(1, 1)
     ultra_balls3 = r.randint(1, 2)
     great_balls3 = r.randint(1, 3)
@@ -600,7 +608,7 @@ while x == 3:
             print("you can't use that you have no more!")
         elif potions <= 0:
             print("you can't use that you have no more!")
-while x == 4:
+while x == 4 and starter == "sobble":
     master_ball4 = r.randint(1, 1)
     ultra_balls4 = r.randint(1, 2)
     great_balls4 = r.randint(1, 3)
@@ -772,7 +780,7 @@ while x == 4:
             print("you can't use that you have no more!")
         elif potions <= 0:
             print("you can't use that you have no more!")
-while x == 5:
+while x == 5 and starter == "sobble": 
     master_ball5 = r.randint(1, 1)
     ultra_balls5 = r.randint(1, 2)
     great_balls5 = r.randint(1, 3)
@@ -1146,10 +1154,10 @@ while x == 1 and starter == "scorbunny":
         if fight7 == "fire punch":
             print("that did 30 damage")
             pickachu_health -= 30
-        if fight6 == "ember":
+        if fight7 == "ember":
             print("that did 20 damage")
             pickachu_health -= 20
-        if fight6 == "double kick":
+        if fight7 == "double kick":
             print("it hit twice!")
             print("that did 20 hp")
             pickachu_health -= 10
@@ -1323,10 +1331,10 @@ while x == 3 and starter == "scorbunny":
         if fight8 == "fire punch":
             print("that did 30 damage")
             nicket_health -= 30
-        if fight6 == "ember":
+        if fight8 == "ember":
             print("that did 20 damage")
             nicket_health -= 20
-        if fight6 == "double kick":
+        if fight8 == "double kick":
             print("it hit twice!")
             print("that did 20 hp")
             nicket_health -= 10
@@ -1475,7 +1483,7 @@ while x == 3 and starter == "scorbunny":
             print("you can't use that you have no more!")
         elif potions <= 0:
             print("you can't use that you have no more!")
-while x == 3 and starter == "scorbunny":
+while x == 4 and starter == "scorbunny":
     master_ball = r.randint(1, 1)
     ultra_balls = r.randint(1, 2)
     great_balls = r.randint(1, 3)
@@ -1486,48 +1494,48 @@ while x == 3 and starter == "scorbunny":
     print("drednaw's health " + str(drednaw_health))
     if answer9 == "run":
         sus.exit("you ran away")
-    elif answer9 == "fight" and starter == "scorbunny" and x == 3:
+    elif answer9 == "fight" and starter == "scorbunny" and x == 4:
 
         print("what move do you want to use")
         print("pound")
         print("ember")
         print("fire punch")
         print("double kick")
-        fight8 = input()
-        if fight8 == "pound":
+        fight9 = input()
+        if fight9 == "pound":
             print("that did 4 damage")
             drednaw_health -= 4
-        if fight8 == "fire punch":
+        if fight9 == "fire punch":
             print("that did 30 damage")
             drednaw_health -= 30
-        if fight6 == "ember":
+        if fight9 == "ember":
             print("that did 20 damage")
             drednaw_health -= 20
-        if fight6 == "double kick":
+        if fight9 == "double kick":
             print("it hit twice!")
             print("that did 20 hp")
             drednaw_health -= 10
-        if nicket2 == 4:
-            print("nicket used night slash")
+        if drednaw2 == 4:
+            print("drednaw used rock tomb")
             scorbunny_health -= 23
-        elif nicket2 == 1:
-            print("nicket used beat up")
+        elif drednaw2 == 1:
+            print("dredaw used liquidation")
             scorbunny_health -= 12
-        elif nicket2 == 2:
-            print("nicket used sucker punch")
+        elif drednaw2 == 2:
+            print("drednaw used water gun")
             scorbunny_health -= 8
-        elif nicket2 == 3:
-            print("nicket used foul play")
+        elif drednaw2 == 3:
+            print("drednaw used hydro pump")
             scorbunny_health -= 20
         if scorbunny_health <= 0:
             audio.play_file('oof.wav', 1)
             print("you have no pokemon that can fight")
             sus.exit(':(')
         if drednaw_health <= 0:
-            print("The wild nicket fainted we'll get em next time")
+            print("The wild drednaw fainted we'll get em next time")
             break
-    elif answer9 == "catch" and catch == 1:
-        print("gotcha nicket was caught!")
+    elif answer9 == "catch" and catch9 == 1:
+        print("gotcha drednaw was caught!")
         break
     elif answer9 == "catch" and catch9 == 2:
         print("close!")
@@ -1626,24 +1634,201 @@ while x == 3 and starter == "scorbunny":
         elif bag9 == "potion" and scorbunny_health == 50:
             print("your pokemon is at full health")
         elif bag9 == "master ball" and master_ball == 1:
-            print("gotcha nicket was caught!")
+            print("gotcha drednaw was caught!")
             break
             sus.exit
         elif bag9 == "ultra ball" and ultra_balls == 1:
-            print("gotcha nicket was caught!")
+            print("gotcha drednaw was caught!")
             break
             sus.exit
         elif ultra_balls == 2:
             ultra_ball -= 1
             print("Aw so close!")
         elif bag9 == "great ball" and great_balls == 1:
-            print("gotcha nicket was caught!")
+            print("gotcha drednaw was caught!")
             break
             sus.exit
         elif bag9 == "great ball" and great_balls == 2:
             great_ball -= 1
             print("close!")
         elif bag9 == "great ball" and great_balls == 3:
+            great_ball -= 1
+            print("Aw that was So close!")
+        elif great_ball <= 0:
+            print("you can't use that you have no more!")
+        elif ultra_ball <= 0:
+            print("you can't use that you have no more!")
+        elif potions <= 0:
+            print("you can't use that you have no more!")
+while x == 5 and starter == "scorbunny":
+    master_ball = r.randint(1, 1)
+    ultra_balls = r.randint(1, 2)
+    great_balls = r.randint(1, 3)
+    catch10 = r.randint(1, 5)
+    eternatus2 = r.randint(1, 4)
+    answer10 = input("fight/catch/bag/run ")
+    print("scorbunny's health " + str(scorbunny_health))
+    print("eternatus's health " + str(eternatus_health))
+    if answer10 == "run":
+        sus.exit("you ran away")
+    elif answer10 == "fight" and starter == "scorbunny" and x == 5:
+
+        print("what move do you want to use")
+        print("pound")
+        print("ember")
+        print("fire punch")
+        print("double kick")
+        fight10 = input()
+        if fight10 == "pound":
+            print("that did 4 damage")
+            eternatus_health -= 4
+        if fight10 == "fire punch":
+            print("that did 30 damage")
+            eternatus_health -= 30
+        if fight10 == "ember":
+            print("that did 20 damage")
+            eternatus_health -= 20
+        if fight10 == "double kick":
+            print("it hit twice!")
+            print("that did 20 hp")
+            eternatus_health -= 10
+        if eternatus2 == 4:
+            print("eternatus used poison tail")
+            scorbunny_health -= 23
+        elif eternatus2 == 1:
+            print("eternatus used dynamax cannon")
+            scorbunny_health -= 12
+        elif eternatus2 == 2:
+            print("eternatus used dragon pulse")
+            scorbunny_health -= 8
+        elif eternatus2 == 3:
+            print("eternatus used eternabeam")
+            scorbunny_health -= 20
+        if scorbunny_health <= 0:
+            audio.play_file('oof.wav', 1)
+            print("you have no pokemon that can fight")
+            sus.exit(':(')
+        if eternatus_health <= 0:
+            print("The wild drednaw fainted we'll get em next time")
+            break
+    elif answer10 == "catch" and catch10 == 1:
+        print("gotcha eternatus was caught!")
+        break
+    elif answer10 == "catch" and catch10 == 2:
+        print("close!")
+    elif answer10 == "catch" and catch10 == 3:
+        print("Aw that was So close!")
+    elif answer10 == "catch" and catch10 == 4:
+        print("That was so close keep it up!")
+    elif answer10 == "catch" and catch10 == 5:
+        print("Ok now that was way to close!")
+    elif answer10 == "bag":
+        print("you have " + str(potions) + " potions")
+        print("you have " + str(great_ball) + " great balls")
+        print("you have " + str(ultra_ball) + " ultra balls")
+        print("you have " + str(master_balls) + " master ball")
+        bag10 = input("what do you want to use ")
+        if bag10 == "potion" and scorbunny_health <= 30:
+            print("healed pokemon")
+            scorbunny_health += 20
+            potions -= 1
+        elif bag10 == "potion" and scorbunny_health == 31:
+            print("healed pokemon")
+            scorbunny_health += 19
+            potions -= 1
+        elif bag10 == "potion" and scorbunny_health == 32:
+            print("healed pokemon")
+            scorbunny_health += 18
+            potions -= 1
+        elif bag10 == "potion" and scorbunny_health == 33:
+            print("healed pokemon")
+            scorbunny_health += 17
+            potions -= 1
+        elif bag10 == "potion" and scorbunny_health == 34:
+            print("healed pokemon")
+            scorbunny_health += 16
+            potions -= 1
+        elif bag10 == "potion" and scorbunny_health == 35:
+            print("healed pokemon")
+            scorbunny_health += 15
+            potions -= 1
+        elif bag10 == "potion" and scorbunny_health == 36:
+            print("healed pokemon")
+            scorbunny_health += 14
+            potions -= 1
+        elif bag10 == "potion" and scorbunny_health == 37:
+            print("healed pokemon")
+            scorbunny_health += 13
+            potions -= 1
+        elif bag10 == "potion" and scorbunny_health == 38:
+            print("healed pokemon")
+            scorbunny_health += 12
+            potions -= 1
+        elif bag10 == "potion" and scorbunny_health == 39:
+            print("healed pokemon")
+            scorbunny_health += 11
+            potions -= 1
+        elif bag10 == "potion" and scorbunny_health == 40:
+            print("healed pokemon")
+            scorbunny_health += 10
+            potions -= 1
+        elif bag10 == "potion" and scorbunny_health == 41:
+            print("healed pokemon")
+            scorbunny_health += 9
+            potions -= 1
+        elif bag10 == "potion" and scorbunny_health == 42:
+            print("healed pokemon")
+            scorbunny_health += 8
+            potions -= 1
+        elif bag10 == "potion" and scorbunny_health == 43:
+            print("healed pokemon")
+            scorbunny_health += 7
+            potions -= 1
+        elif bag10 == "potion" and scorbunny_health == 44:
+            print("healed pokemon")
+            scorbunny_health += 6
+            potions -= 1
+        elif bag10 == "potion" and scorbunny_health == 45:
+            print("healed pokemon")
+            scorbunny_health += 5
+            potions -= 1
+        elif bag10 == "potion" and scorbunny_health == 46:
+            print("healed pokemon")
+            scorbunny_health += 4
+            potions -= 1
+        elif bag10 == "potion" and scorbunny_health == 47:
+            print("healed pokemon")
+            scorbunny_health += 3
+            potions -= 1
+        elif bag10 == "potion" and scorbunny_health == 48:
+            print("healed pokemon")
+            scorbunny_health += 2
+            potions -= 1
+        elif bag10 == "potion" and scorbunny_health == 49:
+            print("healed pokemon")
+            scorbunny_health += 1
+            potions -= 1
+        elif bag10 == "potion" and scorbunny_health == 50:
+            print("your pokemon is at full health")
+        elif bag10 == "master ball" and master_ball == 1:
+            print("gotcha eternatus was caught!")
+            break
+            sus.exit
+        elif bag10 == "ultra ball" and ultra_balls == 1:
+            print("gotcha eternatus was caught!")
+            break
+            sus.exit
+        elif ultra_balls == 2:
+            ultra_ball -= 1
+            print("Aw so close!")
+        elif bag10 == "great ball" and great_balls == 1:
+            print("gotcha eternatus was caught!")
+            break
+            sus.exit
+        elif bag10 == "great ball" and great_balls == 2:
+            great_ball -= 1
+            print("close!")
+        elif bag10 == "great ball" and great_balls == 3:
             great_ball -= 1
             print("Aw that was So close!")
         elif great_ball <= 0:
