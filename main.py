@@ -1829,4 +1829,4 @@ while x == 5 and starter == "scorbunny":
             print("you can't use that you have no more!")
         elif potions <= 0:
             print("you can't use that you have no more!")
-sus.exit('somthing went wrong')
+sus.exit('something went wrong')
