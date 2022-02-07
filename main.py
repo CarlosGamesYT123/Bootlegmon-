@@ -12,21 +12,13 @@ drednaw_health = 80
 pickachu_health = 35
 wooloo_health = 42
 eternatus_health = 140
-grooky_health = 50
-scorbunny_health = 50
-sobble_health = 50
-nicket_health = 40
-drednaw_health = 80
-pickachu_health = 35
-wooloo_health = 42
-eternatus_health = 140
 potions = 20
 master_balls = 1
 ultra_ball = 10
 great_ball = 30
 source = audio.play_file('pokemoncenter.wav',1)
 
-print(' Another project from the team behind THE MONEY\n Hopefuly we won\'t get sued\n Enjoy BOOTLEGMON\n NOTE:this is a FAN MADE PROJECT(do not sue us pls)\n we are in beta so don\'t go nuts')
+print(' Another project from the team behind THE MONEY\n Hopefuly we won\'t get sued\n Enjoy BOOTLEGMON\n NOTE:this is a FAN MADE PROJECT(do not sue us pls)\n we are in alpha so don\'t go nuts')
 t.sleep(10)
 source.set_paused(True)
 #print('\n' * 100)
@@ -71,7 +63,7 @@ while True:
 print("you head into the tall grass and you encountered a wild pokemon")
 source.set_paused(True)
 t.sleep(4)
-x = r.randint(5, 5)
+x = r.randint(1, 5)
 if x == 1:
     print("You encountered a wild pickachu")
 elif x == 2:
