@@ -1,5 +1,4 @@
-# Bootlegmon-
-For school
+# Bootlegmon
 
 this is A FAN MADE PROJECT
 

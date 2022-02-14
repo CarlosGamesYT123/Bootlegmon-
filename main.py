@@ -1,15 +1,16 @@
+import os
 import random as r
 import time as t
 import sys as sus
 from replit import audio
 import replit
 
-grooky_health = 50
+grookey_health = 50
 scorbunny_health = 50
 sobble_health = 50
-nicket_health = 40
+nickit_health = 40
 drednaw_health = 80
-pickachu_health = 35
+pikachu_health = 35
 wooloo_health = 42
 eternatus_health = 140
 potions = 20
@@ -48,24 +49,24 @@ t.sleep(1)
 replit.clear()
 
 while True:
-    starter = input("Which starter do you want Scorbunny, sobble, grooky ")
+    starter = input("Which starter do you want Scorbunny, sobble, grookey ")
     if starter == "sobble":
         print("you chose sobble")
         break
     elif starter == "scorbunny":
         print("you chose scorbunny")
         break
-    elif starter == "grooky":
-        print("you chose grooky")
+    elif starter == "grookey":
+        print("you chose grookey")
         break
     else:
         print("that is not a starter choose another one")
 print("you head into the tall grass and you encountered a wild pokemon")
 source.set_paused(True)
 t.sleep(4)
-x = r.randint(1, 5)
+x = r.randint(4,4)
 if x == 1:
-    print("You encountered a wild pickachu")
+    print("You encountered a wild pikachu")
 elif x == 2:
     print("You encountered a wild wooloo")
 elif x == 3:
@@ -85,6 +86,7 @@ while x == 2 and starter == "sobble" :
     print("sobble's health " + str(sobble_health))
     print("wooloo's health " + str(wooloo_health))
     if answer == "run":
+        fight_music.set_paused(True)
         sus.exit("you ran away")
     elif answer == "fight" and starter == "sobble" and x == 2:
 
@@ -121,6 +123,7 @@ while x == 2 and starter == "sobble" :
         if sobble_health <= 0:
             audio.play_file('oof.wav', 1)
             print("you have no pokemon that can fight")
+            fight_music.set_paused(True)
             sus.exit(':(')
         if wooloo_health <= 0:
             print("The wild wooloo fainted we'll get em next time")
@@ -227,10 +230,12 @@ while x == 2 and starter == "sobble" :
         elif bag == "master ball" and master_ball == 1:
             print("gotcha wooloo was caught!")
             break
+            fight_music.set_paused(True)
             sus.exit
         elif bag == "ultra ball" and ultra_balls == 1:
             print("gotcha wooloo was caught!")
             break
+            fight_music.set_paused(True)
             sus.exit
         elif ultra_balls == 2:
             ultra_ball -= 1
@@ -238,6 +243,7 @@ while x == 2 and starter == "sobble" :
         elif bag == "great ball" and great_balls == 1:
             print("gotcha wooloo was caught!")
             break
+            fight_music.set_paused(True)
             sus.exit
         elif bag == "great ball" and great_balls == 2:
             great_ball -= 1
@@ -256,11 +262,12 @@ while x == 1 and starter == 'sobble':
     ultra_balls2 = r.randint(1, 2)
     great_balls2 = r.randint(1, 3)
     catch2 = r.randint(1, 5)
-    pickachu = r.randint(1, 4)
+    pikachu = r.randint(1, 4)
     answer2 = input("fight/catch/bag/run ")
     print("sobble's health " + str(sobble_health))
-    print("pickachu's health " + str(pickachu_health))
+    print("pikachu's health " + str(pikachu_health))
     if answer2 == "run":
+        fight_music.set_paused(True)
         sus.exit("you ran away")
     elif answer2 == "fight" and starter == "sobble" and x == 1:
         print("what move do you want to use")
@@ -271,40 +278,41 @@ while x == 1 and starter == 'sobble':
         fight2 = input()
         if fight2 == "pound":
             print("that did 4 damage")
-            pickachu_health -= 4
+            pikachu_health -= 4
         if fight2 == "sucker punch":
             print("that did 30 damage")
-            pickachu_health -= 30
+            pikachu_health -= 30
         if fight2 == "water pulse":
             print("that did 20 damage")
-            pickachu_health -= 20
+            pikachu_health -= 20
         if fight2 == "water gun":
             print("that did 10 hp")
-            pickachu_health -= 10
-        if pickachu == 4:
-            print("pickachu used thunder bolt")
+            pikachu_health -= 10
+        if pikachu == 4:
+            print("pikachu used thunder bolt")
             print("That was super effective!")
             sobble_health -= 46
-        elif pickachu == 1:
-            print("pickachu used electro ball")
+        elif pikachu == 1:
+            print("pikachu used electro ball")
             print("that was super effective!")
             sobble_health -= 42
-        elif pickachu == 2:
+        elif pikachu == 2:
             print("pickacu used iron tail")
             sobble_health -= 30
-        elif pickachu == 3:
-            print("pickachu used electro web")
+        elif pikachu == 3:
+            print("pikachu used electro web")
             print("That was super effecive!")
             sobble_health -= 40
         if sobble_health <= 0:
             audio.play_file('oof.wav', 1)
             print("you have no pokemon that can fight")
+            fight_music.set_paused(True)
             sus.exit(':(')
-        if pickachu_health <= 0:
-            print("The wild pickachu fainted we'll get em next time")
+        if pikachu_health <= 0:
+            print("The wild pikachu fainted we'll get em next time")
             break
     elif answer2 == "catch" and catch2 == 1:
-        print("gotcha pickachu was caught!")
+        print("gotcha pikachu was caught!")
         break
     elif answer2 == "catch" and catch2 == 2:
         print("close!")
@@ -403,22 +411,25 @@ while x == 1 and starter == 'sobble':
         elif bag2 == "potion" and sobble_health == 50:
             print("your pokemon is at full health")
         elif bag2 == "master ball" and master_ball == 1:
-            print("gotcha pickachu was caught!")
+            print("gotcha pikachu was caught!")
+            fight_music.set_paused(True)
             sus.exit
         elif bag2 == "ultra ball" and ultra_balls == 1:
-            print("gotcha pickachu was caught!")
+            print("gotcha pikachu was caught!")
+            fight_music.set_paused(True)
             sus.exit
         elif ultra_balls == 2:
             ultra_ball -= 1
             print("Aw so close!")
         elif bag2 == "great ball" and great_balls == 1:
-            print("gotcha pickachu was caught!")
+            print("gotcha pikachu was caught!")
+            fight_music.set_paused(True)
             sus.exit
         elif bag2 == "great ball" and great_balls == 2:
             great_ball -= 1
             print("close!")
         elif bag2 == "great ball" and great_balls == 3:
-            ultra_ball -= 1
+            great_ball -= 1
             print("Aw that was So close!")
         elif great_ball <= 0:
             print("you can't use that you have no more!")
@@ -431,11 +442,12 @@ while x == 3 and starter == "sobble":
     ultra_balls3 = r.randint(1, 2)
     great_balls3 = r.randint(1, 3)
     catch3 = r.randint(1, 5)
-    nicket = r.randint(1, 4)
+    nickit = r.randint(1, 4)
     answer3 = input("fight/catch/bag/run ")
     print("sobble's health " + str(sobble_health))
-    print("nicket's health " + str(nicket_health))
+    print("nickit's health " + str(nickit_health))
     if answer3 == "run":
+        fight_music.set_paused(True)
         sus.exit("you ran away")
     elif answer3 == "fight" and starter == "sobble" and x == 3:
 
@@ -447,34 +459,35 @@ while x == 3 and starter == "sobble":
         fight3 = input()
         if fight3 == "pound":
             print("that did 4 damage")
-            nicket_health -= 4
+            nickit_health -= 4
         if fight3 == "sucker punch":
             print("that did 30 damage")
-            nicket_health -= 30
+            nickit_health -= 30
         if fight3 == "water pulse":
             print("that did 20 damage")
-            nicket_health -= 20
+            nickit_health -= 20
         if fight3 == "water gun":
             print("that did 10 hp")
-            nicket_health -= 10
-        if nicket == 4:
-            print("nicket used double kick")
+            nickit_health -= 10
+        if nickit == 4:
+            print("nickit used double kick")
             print("it hit twice!")
             sobble_health -= 10
-        elif nicket == 1:
-            print("nicket used tail whip")
+        elif nickit == 1:
+            print("nickit used tail whip")
             sobble_health -= 12
-        elif nicket == 2:
-            print("nicket used tackle")
+        elif nickit == 2:
+            print("nickit used tackle")
             sobble_health -= 8
-        elif nicket == 3:
-            print("nicket used dark pulse")
+        elif nickit == 3:
+            print("nickit used dark pulse")
             sobble_health -= 25
         if sobble_health <= 0:
             audio.play_file('oof.wav', 1)
             print("you have no pokemon that can fight")
+            fight_music.set_paused(True)
             sus.exit(':(')
-        if nicket_health <= 0:
+        if nickit_health <= 0:
             print("The wild nickit fainted we'll get em next time")
             break
     elif answer3 == "catch" and catch3 == 1:
@@ -578,15 +591,18 @@ while x == 3 and starter == "sobble":
             print("your pokemon is at full health")
         elif bag3 == "master ball" and master_ball3 == 1:
             print("gotcha nickit was caught!")
+            fight_music.set_paused(True)
             sus.exit
         elif bag3 == "ultra ball" and ultra_balls3 == 1:
             print("gotcha nickit was caught!")
+            fight_music.set_paused(True)
             sus.exit
         elif ultra_balls3 == 2:
             ultra_ball -= 1
             print("Aw so close!")
         elif bag3 == "great ball" and great_balls3 == 1:
-            print("gotcha nicket was caught!")
+            print("gotcha nickit was caught!")
+            fight_music.set_paused(True)
             sus.exit
         elif bag3 == "great ball" and great_balls3 == 2:
             great_ball -= 1
@@ -610,6 +626,7 @@ while x == 4 and starter == "sobble":
     print("sobble's health " + str(sobble_health))
     print("drednaw's health " + str(drednaw_health))
     if answer4 == "run":
+        fight_music.set_paused(True)
         sus.exit("you ran away")
     elif answer4 == "fight" and starter == "sobble" and x == 4:
         print("what move do you want to use")
@@ -936,7 +953,7 @@ while x == 5 and starter == "sobble":
             great_ball -= 1
             print("close!")
         elif bag == "great ball" and great_balls == 3:
-            ultra_ball -= 1
+            great_ball -= 1
             print("Aw that was So close!")
         elif great_ball <= 0:
             print("you can't use that you have no more!")
@@ -1126,10 +1143,10 @@ while x == 1 and starter == "scorbunny":
     ultra_balls = r.randint(1, 2)
     great_balls = r.randint(1, 3)
     catch7 = r.randint(1, 5)
-    pickachu2 = r.randint(1, 4)
+    pikachu2 = r.randint(1, 4)
     answer7 = input("fight/catch/bag/run ")
     print("scorbunny's health " + str(scorbunny_health))
-    print("pickachu's health " + str(pickachu_health))
+    print("pikachu's health " + str(pikachu_health))
     if answer7 == "run":
         sus.exit("you ran away")
     elif answer7 == "fight" and starter == "scorbunny" and x == 1:
@@ -1142,38 +1159,38 @@ while x == 1 and starter == "scorbunny":
         fight7 = input()
         if fight7 == "pound":
             print("that did 4 damage")
-            pickachu_health -= 4
+            pikachu_health -= 4
         if fight7 == "fire punch":
             print("that did 30 damage")
-            pickachu_health -= 30
+            pikachu_health -= 30
         if fight7 == "ember":
             print("that did 20 damage")
-            pickachu_health -= 20
+            pikachu_health -= 20
         if fight7 == "double kick":
             print("it hit twice!")
             print("that did 20 hp")
-            pickachu_health -= 10
-        if pickachu2 == 4:
-            print("pickachu used iron tail")
+            pikachu_health -= 10
+        if pikachu2 == 4:
+            print("pikachu used iron tail")
             scorbunny_health -= 23
-        elif pickachu2 == 1:
-            print("pickachu used thunder bolt")
+        elif pikachu2 == 1:
+            print("pikachu used thunder bolt")
             scorbunny_health -= 12
-        elif pickachu2 == 2:
-            print("pickachu used electro web")
+        elif pikachu2 == 2:
+            print("pikachu used electro web")
             scorbunny_health -= 8
-        elif pickachu2 == 3:
-            print("pickachu used electro ball")
+        elif pikachu2 == 3:
+            print("pikachu used electro ball")
             scorbunny_health -= 20
         if scorbunny_health <= 0:
             audio.play_file('oof.wav', 1)
             print("you have no pokemon that can fight")
             sus.exit(':(')
-        if pickachu_health <= 0:
-            print("The wild pickachu fainted we'll get em next time")
+        if pikachu_health <= 0:
+            print("The wild pikachu fainted we'll get em next time")
             break
     elif answer7 == "catch" and catch7 == 1:
-        print("gotcha pickachu was caught!")
+        print("gotcha pikachu was caught!")
         break
     elif answer7 == "catch" and catch7 == 2:
         print("close!")
@@ -1272,18 +1289,18 @@ while x == 1 and starter == "scorbunny":
         elif bag7 == "potion" and scorbunny_health == 50:
             print("your pokemon is at full health")
         elif bag7 == "master ball" and master_ball == 1:
-            print("gotcha pickachu was caught!")
+            print("gotcha pikachu was caught!")
             break
             sus.exit
         elif bag7 == "ultra ball" and ultra_balls == 1:
-            print("gotcha pickachu was caught!")
+            print("gotcha pikachu was caught!")
             break
             sus.exit
         elif ultra_balls == 2:
             ultra_ball -= 1
             print("Aw so close!")
         elif bag7 == "great ball" and great_balls == 1:
-            print("gotcha pickachu was caught!")
+            print("gotcha pikachu was caught!")
             break
             sus.exit
         elif bag7 == "great ball" and great_balls == 2:
@@ -1303,10 +1320,10 @@ while x == 3 and starter == "scorbunny":
     ultra_balls = r.randint(1, 2)
     great_balls = r.randint(1, 3)
     catch8 = r.randint(1, 5)
-    nicket2 = r.randint(1, 4)
+    nickit2 = r.randint(1, 4)
     answer8 = input("fight/catch/bag/run ")
     print("scorbunny's health " + str(scorbunny_health))
-    print("nicket's health " + str(nicket_health))
+    print("nickit's health " + str(nickit_health))
     if answer8 == "run":
         sus.exit("you ran away")
     elif answer8 == "fight" and starter == "scorbunny" and x == 3:
@@ -1319,38 +1336,39 @@ while x == 3 and starter == "scorbunny":
         fight8 = input()
         if fight8 == "pound":
             print("that did 4 damage")
-            nicket_health -= 4
+            nickit_health -= 4
         if fight8 == "fire punch":
             print("that did 30 damage")
-            nicket_health -= 30
+            nickit_health -= 30
         if fight8 == "ember":
             print("that did 20 damage")
-            nicket_health -= 20
+            nickit_health -= 20
         if fight8 == "double kick":
             print("it hit twice!")
-            print("that did 20 hp")
-            nicket_health -= 10
-        if nicket2 == 4:
-            print("nicket used night slash")
+            print("that did 40 hp")
+            print("that was super effective!")
+            nickit_health -= 40
+        if nickit2 == 4:
+            print("nickit used night slash")
             scorbunny_health -= 23
-        elif nicket2 == 1:
-            print("nicket used beat up")
+        elif nickit2 == 1:
+            print("nickit used beat up")
             scorbunny_health -= 12
-        elif nicket2 == 2:
-            print("nicket used sucker punch")
+        elif nickit2 == 2:
+            print("nickit used sucker punch")
             scorbunny_health -= 8
-        elif nicket2 == 3:
-            print("nicket used foul play")
+        elif nickit2 == 3:
+            print("nickit used foul play")
             scorbunny_health -= 20
         if scorbunny_health <= 0:
             audio.play_file('oof.wav', 1)
             print("you have no pokemon that can fight")
             sus.exit(':(')
-        if nicket_health <= 0:
-            print("The wild nicket fainted we'll get em next time")
+        if nickit_health <= 0:
+            print("The wild nickit fainted we'll get em next time")
             break
     elif answer8 == "catch" and catch8 == 1:
-        print("gotcha nicket was caught!")
+        print("gotcha nickit was caught!")
         break
     elif answer8 == "catch" and catch8 == 2:
         print("close!")
@@ -1449,18 +1467,18 @@ while x == 3 and starter == "scorbunny":
         elif bag8 == "potion" and scorbunny_health == 50:
             print("your pokemon is at full health")
         elif bag8 == "master ball" and master_ball == 1:
-            print("gotcha nicket was caught!")
+            print("gotcha nickit was caught!")
             break
             sus.exit
         elif bag8 == "ultra ball" and ultra_balls == 1:
-            print("gotcha nicket was caught!")
+            print("gotcha nickit was caught!")
             break
             sus.exit
         elif ultra_balls == 2:
             ultra_ball -= 1
             print("Aw so close!")
         elif bag8 == "great ball" and great_balls == 1:
-            print("gotcha nicket was caught!")
+            print("gotcha nickit was caught!")
             break
             sus.exit
         elif bag8 == "great ball" and great_balls == 2:
@@ -1829,4 +1847,713 @@ while x == 5 and starter == "scorbunny":
             print("you can't use that you have no more!")
         elif potions <= 0:
             print("you can't use that you have no more!")
-sus.exit('something went wrong')
+while x == 2 and starter == "grookey":
+    master_ball = r.randint(1, 1)
+    ultra_balls = r.randint(1, 2)
+    great_balls = r.randint(1, 3)
+    catch11 = r.randint(1, 5)
+    wooloo3 = r.randint(1, 4)
+    answer11 = input("fight/catch/bag/run ")
+    print("grookey's health " + str(grookey_health))
+    print("wooloo's health " + str(wooloo_health))
+    if answer11 == "run":
+        sus.exit("you ran away")
+    elif answer11 == "fight" and starter == "grookey" and x == 2:
+        print("what move do you want to use")
+        print("scratch")
+        print("branch poke")
+        print("razor leaf")
+        print("magical leaf")
+        fight11 = input()
+        if fight11 == "scratch":
+            print("that did 4 damage")
+            wooloo_health -= 4
+        if fight11 == "razor leaf":
+            print("that did 25 damage")
+            wooloo_health -= 25
+        if fight11 == "branch poke":
+            print("that did 12 damage")
+            wooloo_health -= 12
+        if fight11 == "magical leaf":
+            print("that did 27 hp")
+            wooloo_health -= 27
+        if wooloo3 == 4:
+            print("wooloo used Double-Edge")
+            grookey_health -= 23
+        elif wooloo3 == 1:
+            print("wooloo used take down")
+            grookey_health -= 12
+        elif wooloo3 == 2:
+            print("wooloo used tackle")
+            grookey_health -= 8
+        elif wooloo3 == 3:
+            print("wooloo used headbutt")
+            grookey_health -= 20
+        if grookey_health <= 0:
+            audio.play_file('oof.wav', 1)
+            print("you have no pokemon that can fight")
+            sus.exit(':(')
+        if wooloo_health <= 0:
+            print("The wild wooloo fainted we'll get em next time")
+            break
+    elif answer11 == "catch" and catch11 == 1:
+        print("gotcha wooloo was caught!")
+        break
+    elif answer11 == "catch" and catch11 == 2:
+        print("close!")
+    elif answer11 == "catch" and catch11 == 3:
+        print("Aw that was So close!")
+    elif answer11 == "catch" and catch11 == 4:
+        print("That was so close keep it up!")
+    elif answer11 == "catch" and catch11 == 5:
+        print("Ok now that was way to close!")
+    elif answer11 == "bag":
+        print("you have " + str(potions) + " potions")
+        print("you have " + str(great_ball) + " great balls")
+        print("you have " + str(ultra_ball) + " ultra balls")
+        print("you have " + str(master_balls) + " master ball")
+        bag11 = input("what do you want to use ")
+        if bag11 == "potion" and grookey_health <= 30:
+            print("healed pokemon")
+            grookey_health += 20
+            potions -= 1
+        elif bag11 == "potion" and grookey_health == 31:
+            print("healed pokemon")
+            grookey_health += 19
+            potions -= 1
+        elif bag11 == "potion" and grookey_health == 32:
+            print("healed pokemon")
+            grookey_health += 18
+            potions -= 1
+        elif bag11 == "potion" and grookey_health == 33:
+            print("healed pokemon")
+            grookey_health += 17
+            potions -= 1
+        elif bag11 == "potion" and grookey_health == 34:
+            print("healed pokemon")
+            grookey_health += 16
+            potions -= 1
+        elif bag11 == "potion" and grookey_health == 35:
+            print("healed pokemon")
+            grookey_health += 15
+            potions -= 1
+        elif bag11 == "potion" and grookey_health == 36:
+            print("healed pokemon")
+            grookey_health += 14
+            potions -= 1
+        elif bag11 == "potion" and grookey_health == 37:
+            print("healed pokemon")
+            grookey_health += 13
+            potions -= 1
+        elif bag11 == "potion" and grookey_health == 38:
+            print("healed pokemon")
+            grookey_health += 12
+            potions -= 1
+        elif bag11 == "potion" and grookey_health == 39:
+            print("healed pokemon")
+            grookey_health += 11
+            potions -= 1
+        elif bag11 == "potion" and grookey_health == 40:
+            print("healed pokemon")
+            grookey_health += 10
+            potions -= 1
+        elif bag11 == "potion" and grookey_health == 41:
+            print("healed pokemon")
+            grookey_health += 9
+            potions -= 1
+        elif bag11 == "potion" and grookey_health == 42:
+            print("healed pokemon")
+            grookey_health += 8
+            potions -= 1
+        elif bag11 == "potion" and grookey_health == 43:
+            print("healed pokemon")
+            grookey_health += 7
+            potions -= 1
+        elif bag11 == "potion" and grookey_health == 44:
+            print("healed pokemon")
+            grookey_health += 6
+            potions -= 1
+        elif bag11 == "potion" and grookey_health == 45:
+            print("healed pokemon")
+            grookey_health += 5
+            potions -= 1
+        elif bag11 == "potion" and grookey_health == 46:
+            print("healed pokemon")
+            grookey_health += 4
+            potions -= 1
+        elif bag11 == "potion" and grookey_health == 47:
+            print("healed pokemon")
+            grookey_health += 3
+            potions -= 1
+        elif bag11 == "potion" and grookey_health == 48:
+            print("healed pokemon")
+            grookey_health += 2
+            potions -= 1
+        elif bag11 == "potion" and grookey_health == 49:
+            print("healed pokemon")
+            grookey_health += 1
+            potions -= 1
+        elif bag11 == "potion" and grookey_health == 50:
+            print("your pokemon is at full health")
+        elif bag11 == "master ball" and master_ball == 1:
+            print("gotcha wooloo was caught!")
+            break
+            sus.exit
+        elif bag11 == "ultra ball" and ultra_balls == 1:
+            print("gotcha wooloo was caught!")
+            break
+            sus.exit
+        elif ultra_balls == 2:
+            ultra_ball -= 1
+            print("Aw so close!")
+        elif bag11 == "great ball" and great_balls == 1:
+            print("gotcha wooloo was caught!")
+            break
+            sus.exit
+        elif bag11 == "great ball" and great_balls == 2:
+            great_ball -= 1
+            print("close!")
+        elif bag11 == "great ball" and great_balls == 3:
+            great_ball -= 1
+            print("Aw that was So close!")
+        elif great_ball <= 0:
+            print("you can't use that you have no more!")
+        elif ultra_ball <= 0:
+            print("you can't use that you have no more!")
+        elif potions <= 0:
+            print("you can't use that you have no more!")
+while x == 1 and starter == "grookey":
+    master_ball = r.randint(1, 1)
+    ultra_balls = r.randint(1, 2)
+    great_balls = r.randint(1, 3)
+    catch12 = r.randint(1, 5)
+    pikachu3 = r.randint(1, 4)
+    answer12 = input("fight/catch/bag/run ")
+    print("grookey's health " + str(grookey_health))
+    print("pikachu's health " + str(pikachu_health))
+    if answer12 == "run":
+        sus.exit("you ran away")
+    elif answer12 == "fight" and starter == "grookey" and x == 1:
+
+        print("what move do you want to use")
+        print("scratch")
+        print("branch poke")
+        print("razor leaf")
+        print("magical leaf")
+        fight12 = input()
+        if fight12 == "scratch":
+            print("that did 4 damage")
+            pikachu_health -= 4
+        if fight12 == "razor leaf":
+            print("that did 25 damage")
+            pikachu_health -= 25
+        if fight12 == "branch poke":
+            print("that did 12 damage")
+            pikachu_health -= 12
+        if fight12 == "magical leaf":
+            print("that did 27 hp")
+            pikachu_health -= 27
+        if pikachu3 == 4:
+            print("pikachu used thunder bolt")
+            print("that's not very effective")
+            grookey_health -= 13
+        elif pikachu3 == 1:
+            print("pikacu used electro web")
+            print("that's not very effective")
+            grookey_health -= 13
+        elif pikachu3 == 2:
+            print("pikachu used iron tail")
+            print("that's not very effective")
+            grookey_health -= 8
+        elif pikachu3 == 3:
+            print("pikachu used electro ball")
+            print("that's not very effective")
+            grookey_health -= 10
+        if grookey_health <= 0:
+            audio.play_file('oof.wav', 1)
+            print("you have no pokemon that can fight")
+            sus.exit(':(')
+        if pikachu_health <= 0:
+            print("The wild pikachu fainted we'll get em next time")
+            break
+    elif answer12 == "catch" and catch12 == 1:
+        print("gotcha pikachu was caught!")
+        break
+    elif answer12 == "catch" and catch12 == 2:
+        print("close!")
+    elif answer12 == "catch" and catch12 == 3:
+        print("Aw that was So close!")
+    elif answer12 == "catch" and catch12 == 4:
+        print("That was so close keep it up!")
+    elif answer12 == "catch" and catch12 == 5:
+        print("Ok now that was way to close!")
+    elif answer12 == "bag":
+        print("you have " + str(potions) + " potions")
+        print("you have " + str(great_ball) + " great balls")
+        print("you have " + str(ultra_ball) + " ultra balls")
+        print("you have " + str(master_balls) + " master ball")
+        bag12 = input("what do you want to use ")
+        if bag12 == "potion" and grookey_health <= 30:
+            print("healed pokemon")
+            grookey_health += 20
+            potions -= 1
+        elif bag12 == "potion" and grookey_health == 31:
+            print("healed pokemon")
+            grookey_health += 19
+            potions -= 1
+        elif bag12 == "potion" and grookey_health == 32:
+            print("healed pokemon")
+            grookey_health += 18
+            potions -= 1
+        elif bag12 == "potion" and grookey_health == 33:
+            print("healed pokemon")
+            grookey_health += 17
+            potions -= 1
+        elif bag12 == "potion" and grookey_health == 34:
+            print("healed pokemon")
+            grookey_health += 16
+            potions -= 1
+        elif bag12 == "potion" and grookey_health == 35:
+            print("healed pokemon")
+            grookey_health += 15
+            potions -= 1
+        elif bag12 == "potion" and grookey_health == 36:
+            print("healed pokemon")
+            grookey_health += 14
+            potions -= 1
+        elif bag12 == "potion" and grookey_health == 37:
+            print("healed pokemon")
+            grookey_health += 13
+            potions -= 1
+        elif bag12 == "potion" and grookey_health == 38:
+            print("healed pokemon")
+            grookey_health += 12
+            potions -= 1
+        elif bag12 == "potion" and grookey_health == 39:
+            print("healed pokemon")
+            grookey_health += 11
+            potions -= 1
+        elif bag12 == "potion" and grookey_health == 40:
+            print("healed pokemon")
+            grookey_health += 10
+            potions -= 1
+        elif bag12 == "potion" and grookey_health == 41:
+            print("healed pokemon")
+            grookey_health += 9
+            potions -= 1
+        elif bag12 == "potion" and grookey_health == 42:
+            print("healed pokemon")
+            grookey_health += 8
+            potions -= 1
+        elif bag12 == "potion" and grookey_health == 43:
+            print("healed pokemon")
+            grookey_health += 7
+            potions -= 1
+        elif bag12 == "potion" and grookey_health == 44:
+            print("healed pokemon")
+            grookey_health += 6
+            potions -= 1
+        elif bag12 == "potion" and grookey_health == 45:
+            print("healed pokemon")
+            grookey_health += 5
+            potions -= 1
+        elif bag12 == "potion" and grookey_health == 46:
+            print("healed pokemon")
+            grookey_health += 4
+            potions -= 1
+        elif bag12 == "potion" and grookey_health == 47:
+            print("healed pokemon")
+            grookey_health += 3
+            potions -= 1
+        elif bag12 == "potion" and grookey_health == 48:
+            print("healed pokemon")
+            grookey_health += 2
+            potions -= 1
+        elif bag12 == "potion" and grookey_health == 49:
+            print("healed pokemon")
+            grookey_health += 1
+            potions -= 1
+        elif bag12 == "potion" and grookey_health == 50:
+            print("your pokemon is at full health")
+        elif bag12 == "master ball" and master_ball == 1:
+            print("gotcha pikachu was caught!")
+            break
+            sus.exit
+        elif bag12 == "ultra ball" and ultra_balls == 1:
+            print("gotcha pikachu was caught!")
+            break
+            sus.exit
+        elif ultra_balls == 2:
+            ultra_ball -= 1
+            print("Aw so close!")
+        elif bag12 == "great ball" and great_balls == 1:
+            print("gotcha pikachu was caught!")
+            break
+            sus.exit
+        elif bag12 == "great ball" and great_balls == 2:
+            great_ball -= 1
+            print("close!")
+        elif bag12 == "great ball" and great_balls == 3:
+            great_ball -= 1
+            print("Aw that was So close!")
+        elif great_ball <= 0:
+            print("you can't use that you have no more!")
+        elif ultra_ball <= 0:
+            print("you can't use that you have no more!")
+        elif potions <= 0:
+            print("you can't use that you have no more!")
+while x == 3 and starter == "grookey":
+    master_ball = r.randint(1, 1)
+    ultra_balls = r.randint(1, 2)
+    great_balls = r.randint(1, 3)
+    catch13 = r.randint(1, 5)
+    nickit3 = r.randint(1, 4)
+    answer13 = input("fight/catch/bag/run ")
+    print("grookey's health " + str(grookey_health))
+    print("nickit's health " + str(nickit_health))
+    if answer13 == "run":
+        sus.exit("you ran away")
+    elif answer13 == "fight" and starter == "grookey" and x == 3:
+
+        print("what move do you want to use")
+        print("scratch")
+        print("branch poke")
+        print("razor leaf")
+        print("magical leaf")
+        fight13 = input()
+        if fight13 == "scratch":
+            print("that did 4 damage")
+            nickit_health -= 4
+        if fight13 == "razor leaf":
+            print("that did 25 damage")
+            nickit_health -= 25
+        if fight13 == "branch poke":
+            print("that did 13 damage")
+            nickit_health -= 12
+        if fight13 == "magical leaf":
+            print("that did 27 hp")
+            nickit_health -= 27
+        if nickit3 == 4:
+            print("nickit used night slash")
+            grookey_health -= 13
+        elif nickit3 == 1:
+            print("nickit used beat up")
+            grookey_health -= 13
+        elif nickit3 == 2:
+            print("nickit used foul play")
+            grookey_health -= 8
+        elif nickit3 == 3:
+            print("nickit used sucker punch")
+            grookey_health -= 10
+        if grookey_health <= 0:
+            audio.play_file('oof.wav', 1)
+            print("you have no pokemon that can fight")
+            sus.exit(':(')
+        if nickit_health <= 0:
+            print("The wild nickit fainted we'll get em next time")
+            break
+    elif answer13 == "catch" and catch13 == 1:
+        print("gotcha nickit was caught!")
+        break
+    elif answer13 == "catch" and catch13 == 2:
+        print("close!")
+    elif answer13 == "catch" and catch13 == 3:
+        print("Aw that was So close!")
+    elif answer13 == "catch" and catch13 == 4:
+        print("That was so close keep it up!")
+    elif answer13 == "catch" and catch13 == 5:
+        print("Ok now that was way to close!")
+    elif answer13 == "bag":
+        print("you have " + str(potions) + " potions")
+        print("you have " + str(great_ball) + " great balls")
+        print("you have " + str(ultra_ball) + " ultra balls")
+        print("you have " + str(master_balls) + " master ball")
+        bag13 = input("what do you want to use ")
+        if bag13 == "potion" and grookey_health <= 30:
+            print("healed pokemon")
+            grookey_health += 20
+            potions -= 1
+        elif bag13 == "potion" and grookey_health == 31:
+            print("healed pokemon")
+            grookey_health += 19
+            potions -= 1
+        elif bag13 == "potion" and grookey_health == 32:
+            print("healed pokemon")
+            grookey_health += 18
+            potions -= 1
+        elif bag13 == "potion" and grookey_health == 33:
+            print("healed pokemon")
+            grookey_health += 17
+            potions -= 1
+        elif bag13 == "potion" and grookey_health == 34:
+            print("healed pokemon")
+            grookey_health += 16
+            potions -= 1
+        elif bag13 == "potion" and grookey_health == 35:
+            print("healed pokemon")
+            grookey_health += 15
+            potions -= 1
+        elif bag13 == "potion" and grookey_health == 36:
+            print("healed pokemon")
+            grookey_health += 14
+            potions -= 1
+        elif bag13 == "potion" and grookey_health == 37:
+            print("healed pokemon")
+            grookey_health += 13
+            potions -= 1
+        elif bag13 == "potion" and grookey_health == 38:
+            print("healed pokemon")
+            grookey_health += 12
+            potions -= 1
+        elif bag13 == "potion" and grookey_health == 39:
+            print("healed pokemon")
+            grookey_health += 11
+            potions -= 1
+        elif bag13 == "potion" and grookey_health == 40:
+            print("healed pokemon")
+            grookey_health += 10
+            potions -= 1
+        elif bag13 == "potion" and grookey_health == 41:
+            print("healed pokemon")
+            grookey_health += 9
+            potions -= 1
+        elif bag13 == "potion" and grookey_health == 42:
+            print("healed pokemon")
+            grookey_health += 8
+            potions -= 1
+        elif bag13 == "potion" and grookey_health == 43:
+            print("healed pokemon")
+            grookey_health += 7
+            potions -= 1
+        elif bag13 == "potion" and grookey_health == 44:
+            print("healed pokemon")
+            grookey_health += 6
+            potions -= 1
+        elif bag13 == "potion" and grookey_health == 45:
+            print("healed pokemon")
+            grookey_health += 5
+            potions -= 1
+        elif bag13 == "potion" and grookey_health == 46:
+            print("healed pokemon")
+            grookey_health += 4
+            potions -= 1
+        elif bag13 == "potion" and grookey_health == 47:
+            print("healed pokemon")
+            grookey_health += 3
+            potions -= 1
+        elif bag13 == "potion" and grookey_health == 48:
+            print("healed pokemon")
+            grookey_health += 2
+            potions -= 1
+        elif bag13 == "potion" and grookey_health == 49:
+            print("healed pokemon")
+            grookey_health += 1
+            potions -= 1
+        elif bag13 == "potion" and grookey_health == 50:
+            print("your pokemon is at full health")
+        elif bag13 == "master ball" and master_ball == 1:
+            print("gotcha nickit was caught!")
+            break
+            sus.exit
+        elif bag13 == "ultra ball" and ultra_balls == 1:
+            print("gotcha nickit was caught!")
+            break
+            sus.exit
+        elif ultra_balls == 2:
+            ultra_ball -= 1
+            print("Aw so close!")
+        elif bag13 == "great ball" and great_balls == 1:
+            print("gotcha nickit was caught!")
+            break
+            sus.exit
+        elif bag13 == "great ball" and great_balls == 2:
+            great_ball -= 1
+            print("close!")
+        elif bag13 == "great ball" and great_balls == 3:
+            great_ball -= 1
+            print("Aw that was So close!")
+        elif great_ball <= 0:
+            print("you can't use that you have no more!")
+        elif ultra_ball <= 0:
+            print("you can't use that you have no more!")
+        elif potions <= 0:
+            print("you can't use that you have no more!")
+while x == 4 and starter == "grookey":
+    master_ball = r.randint(1, 1)
+    ultra_balls = r.randint(1, 2)
+    great_balls = r.randint(1, 3)
+    catch14 = r.randint(1, 5)
+    drednaw3 = r.randint(1, 4)
+    answer14 = input("fight/catch/bag/run ")
+    print("grookey's health " + str(grookey_health))
+    print("drednaw's health " + str(drednaw_health))
+    if answer14 == "run":
+        sus.exit("you ran away")
+    elif answer14 == "fight" and starter == "grookey" and x == 4:
+
+        print("what move do you want to use")
+        print("scratch")
+        print("branch poke")
+        print("razor leaf")
+        print("magical leaf")
+        fight14 = input()
+        if fight14 == "scratch":
+            print("that did 4 damage")
+            drednaw_health -= 4
+        if fight14 == "razor leaf":
+            print("that did 45 damage")
+            print("that was super effective!")
+            drednaw_health -= 25
+        if fight14 == "branch poke":
+            print("that did 26 damage")
+            print("that was super effective!")
+            drednaw_health -= 12
+        if fight14 == "magical leaf":
+            print("that did 56 hp")
+            print("that was super effecive!")
+            drednaw_health -= 27
+        if drednaw3 == 4:
+            print("drednaw used hydro pump")
+            grookey_health -= 13
+        elif drednaw3 == 1:
+            print("drednaw used water gun")
+            grookey_health -= 13
+        elif drednaw3 == 2:
+            print("drednaw used rock tomb")
+            grookey_health -= 30
+        elif drednaw3 == 3:
+            print("drednaw used liquidation")
+            grookey_health -= 10
+        if grookey_health <= 0:
+            audio.play_file('oof.wav', 1)
+            print("you have no pokemon that can fight")
+            sus.exit(':(')
+        if drednaw_health <= 0:
+            print("The wild drednaw fainted we'll get em next time")
+            break
+    elif answer14 == "catch" and catch14 == 1:
+        print("gotcha drednaw was caught!")
+        break
+    elif answer14 == "catch" and catch14 == 2:
+        print("close!")
+    elif answer14 == "catch" and catch14 == 3:
+        print("Aw that was So close!")
+    elif answer14 == "catch" and catch14 == 4:
+        print("That was so close keep it up!")
+    elif answer14 == "catch" and catch14 == 5:
+        print("Ok now that was way to close!")
+    elif answer14 == "bag":
+        print("you have " + str(potions) + " potions")
+        print("you have " + str(great_ball) + " great balls")
+        print("you have " + str(ultra_ball) + " ultra balls")
+        print("you have " + str(master_balls) + " master ball")
+        bag14 = input("what do you want to use ")
+        if bag14 == "potion" and grookey_health <= 30:
+            print("healed pokemon")
+            grookey_health += 20
+            potions -= 1
+        elif bag14 == "potion" and grookey_health == 31:
+            print("healed pokemon")
+            grookey_health += 19
+            potions -= 1
+        elif bag14 == "potion" and grookey_health == 32:
+            print("healed pokemon")
+            grookey_health += 18
+            potions -= 1
+        elif bag14 == "potion" and grookey_health == 33:
+            print("healed pokemon")
+            grookey_health += 17
+            potions -= 1
+        elif bag14 == "potion" and grookey_health == 34:
+            print("healed pokemon")
+            grookey_health += 16
+            potions -= 1
+        elif bag14 == "potion" and grookey_health == 35:
+            print("healed pokemon")
+            grookey_health += 15
+            potions -= 1
+        elif bag14 == "potion" and grookey_health == 36:
+            print("healed pokemon")
+            grookey_health += 14
+            potions -= 1
+        elif bag14 == "potion" and grookey_health == 37:
+            print("healed pokemon")
+            grookey_health += 13
+            potions -= 1
+        elif bag14 == "potion" and grookey_health == 38:
+            print("healed pokemon")
+            grookey_health += 12
+            potions -= 1
+        elif bag14 == "potion" and grookey_health == 39:
+            print("healed pokemon")
+            grookey_health += 11
+            potions -= 1
+        elif bag14 == "potion" and grookey_health == 40:
+            print("healed pokemon")
+            grookey_health += 10
+            potions -= 1
+        elif bag14 == "potion" and grookey_health == 41:
+            print("healed pokemon")
+            grookey_health += 9
+            potions -= 1
+        elif bag14 == "potion" and grookey_health == 42:
+            print("healed pokemon")
+            grookey_health += 8
+            potions -= 1
+        elif bag14 == "potion" and grookey_health == 43:
+            print("healed pokemon")
+            grookey_health += 7
+            potions -= 1
+        elif bag14 == "potion" and grookey_health == 44:
+            print("healed pokemon")
+            grookey_health += 6
+            potions -= 1
+        elif bag14 == "potion" and grookey_health == 45:
+            print("healed pokemon")
+            grookey_health += 5
+            potions -= 1
+        elif bag14 == "potion" and grookey_health == 46:
+            print("healed pokemon")
+            grookey_health += 4
+            potions -= 1
+        elif bag14 == "potion" and grookey_health == 47:
+            print("healed pokemon")
+            grookey_health += 3
+            potions -= 1
+        elif bag14 == "potion" and grookey_health == 48:
+            print("healed pokemon")
+            grookey_health += 2
+            potions -= 1
+        elif bag14 == "potion" and grookey_health == 49:
+            print("healed pokemon")
+            grookey_health += 1
+            potions -= 1
+        elif bag14 == "potion" and grookey_health == 50:
+            print("your pokemon is at full health")
+        elif bag14 == "master ball" and master_ball == 1:
+            print("gotcha drednaw was caught!")
+            break
+            sus.exit
+        elif bag14 == "ultra ball" and ultra_balls == 1:
+            print("gotcha drednaw was caught!")
+            break
+            sus.exit
+        elif ultra_balls == 2:
+            ultra_ball -= 1
+            print("Aw so close!")
+        elif bag14 == "great ball" and great_balls == 1:
+            print("gotcha drednaw was caught!")
+            break
+            sus.exit
+        elif bag14 == "great ball" and great_balls == 2:
+            great_ball -= 1
+            print("close!")
+        elif bag14 == "great ball" and great_balls == 3:
+            great_ball -= 1
+            print("Aw that was So close!")
+        elif great_ball <= 0:
+            print("you can't use that you have no more!")
+        elif ultra_ball <= 0:
+            print("you can't use that you have no more!")
+        elif potions <= 0:
+            print("you can't use that you have no more!")
