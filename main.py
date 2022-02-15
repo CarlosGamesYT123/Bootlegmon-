@@ -17,7 +17,7 @@ potions = 20
 master_balls = 1
 ultra_ball = 10
 great_ball = 30
-source = audio.play_file('pokemoncenter.wav',1)
+source = audio.play_file('pokemoncenter.mp3',1)
 
 print(' Another project from the team behind THE MONEY\n Hopefuly we won\'t get sued\n 2740 lines of code Please Enjoy BOOTLEGMON\n NOTE:this is a FAN MADE PROJECT(do not sue us pls)')
 t.sleep(10)
@@ -37,11 +37,11 @@ print('loading modules')
 t.sleep(6)
 replit.clear()
 print('preparing for death')
-oof = audio.play_file('oof.wav',1)
+oof = audio.play_file('oof.mp3',1)
 t.sleep(10)
 replit.clear()
 print('loading music')
-source = audio.platy_file('pokemoncenter.wav',1)
+source = audio.play_file('pokemoncenter.mp3',1)
 t.sleep(5)
 replit.clear()
 print('let\'s play!')
@@ -75,7 +75,7 @@ elif x == 4:
     print("You encountered a tough looking drednaw")
 elif x == 5:
     print("You encountered a wild WOAH WHAT THE A WILD ETERNATUS")
-fight_music = audio.play_file('pokemon.wav', 1)
+fight_music = audio.play_file('pokemon.mp3', 1)
 while x == 2 and starter == "sobble" :
     master_ball = r.randint(1, 1)
     ultra_balls = r.randint(1, 2)
@@ -121,7 +121,7 @@ while x == 2 and starter == "sobble" :
             print("wooloo used headbutt")
             sobble_health -= 20
         if sobble_health <= 0:
-            audio.play_file('oof.wav', 1)
+            audio.play_file('oof.mp3', 1)
             print("you have no pokemon that can fight")
             fight_music.set_paused(True)
             sus.exit(':(')
@@ -304,7 +304,7 @@ while x == 1 and starter == 'sobble':
             print("That was super effecive!")
             sobble_health -= 40
         if sobble_health <= 0:
-            audio.play_file('oof.wav', 1)
+            audio.play_file('oof.mp3', 1)
             print("you have no pokemon that can fight")
             fight_music.set_paused(True)
             sus.exit(':(')
@@ -483,7 +483,7 @@ while x == 3 and starter == "sobble":
             print("nickit used dark pulse")
             sobble_health -= 25
         if sobble_health <= 0:
-            audio.play_file('oof.wav', 1)
+            audio.play_file('oof.mp3', 1)
             print("you have no pokemon that can fight")
             fight_music.set_paused(True)
             sus.exit(':(')
@@ -660,7 +660,7 @@ while x == 4 and starter == "sobble":
             print("drednaw used water pulse")
             sobble_health -= 25
         if sobble_health <= 0:
-            audio.play_file('oof.wav', 1)
+            audio.play_file('oof.mp3', 1)
             print("you have no pokemon that can fight")
             sus.exit(':(')
         if drednaw_health <= 0:
@@ -832,7 +832,7 @@ while x == 5 and starter == "sobble":
             print("eternatus used poison jab")
             sobble_health -= 25
         if sobble_health <= 0:
-            audio.play_file('oof.wav', 1)
+            audio.play_file('oof.mp3', 1)
             print("you have no pokemon that can fight")
             sus.exit(':(')
         if eternatus_health <= 0:
@@ -1006,7 +1006,7 @@ while x == 2 and starter == "scorbunny":
             print("wooloo used headbutt")
             scorbunny_health -= 20
         if scorbunny_health <= 0:
-            audio.play_file('oof.wav', 1)
+            audio.play_file('oof.mp3', 1)
             print("you have no pokemon that can fight")
             sus.exit(':(')
         if wooloo_health <= 0:
@@ -1183,7 +1183,7 @@ while x == 1 and starter == "scorbunny":
             print("pikachu used electro ball")
             scorbunny_health -= 20
         if scorbunny_health <= 0:
-            audio.play_file('oof.wav', 1)
+            audio.play_file('oof.mp3', 1)
             print("you have no pokemon that can fight")
             sus.exit(':(')
         if pikachu_health <= 0:
@@ -1361,7 +1361,7 @@ while x == 3 and starter == "scorbunny":
             print("nickit used foul play")
             scorbunny_health -= 20
         if scorbunny_health <= 0:
-            audio.play_file('oof.wav', 1)
+            audio.play_file('oof.mp3', 1)
             print("you have no pokemon that can fight")
             sus.exit(':(')
         if nickit_health <= 0:
@@ -1538,7 +1538,7 @@ while x == 4 and starter == "scorbunny":
             print("drednaw used hydro pump")
             scorbunny_health -= 20
         if scorbunny_health <= 0:
-            audio.play_file('oof.wav', 1)
+            audio.play_file('oof.mp3', 1)
             print("you have no pokemon that can fight")
             sus.exit(':(')
         if drednaw_health <= 0:
@@ -1715,7 +1715,7 @@ while x == 5 and starter == "scorbunny":
             print("eternatus used eternabeam")
             scorbunny_health -= 20
         if scorbunny_health <= 0:
-            audio.play_file('oof.wav', 1)
+            audio.play_file('oof.mp3', 1)
             print("you have no pokemon that can fight")
             sus.exit(':(')
         if eternatus_health <= 0:
@@ -1890,7 +1890,7 @@ while x == 2 and starter == "grookey":
             print("wooloo used headbutt")
             grookey_health -= 20
         if grookey_health <= 0:
-            audio.play_file('oof.wav', 1)
+            audio.play_file('oof.mp3', 1)
             print("you have no pokemon that can fight")
             sus.exit(':(')
         if wooloo_health <= 0:
@@ -2070,7 +2070,7 @@ while x == 1 and starter == "grookey":
             print("that's not very effective")
             grookey_health -= 10
         if grookey_health <= 0:
-            audio.play_file('oof.wav', 1)
+            audio.play_file('oof.mp3', 1)
             print("you have no pokemon that can fight")
             sus.exit(':(')
         if pikachu_health <= 0:
@@ -2246,7 +2246,7 @@ while x == 3 and starter == "grookey":
             print("nickit used sucker punch")
             grookey_health -= 10
         if grookey_health <= 0:
-            audio.play_file('oof.wav', 1)
+            audio.play_file('oof.mp3', 1)
             print("you have no pokemon that can fight")
             sus.exit(':(')
         if nickit_health <= 0:
@@ -2425,7 +2425,7 @@ while x == 4 and starter == "grookey":
             print("drednaw used liquidation")
             grookey_health -= 10
         if grookey_health <= 0:
-            audio.play_file('oof.wav', 1)
+            audio.play_file('oof.mp3', 1)
             print("you have no pokemon that can fight")
             sus.exit(':(')
         if drednaw_health <= 0:
@@ -2602,7 +2602,7 @@ while x == 5 and starter == "grookey":
             print("eternatus used eternabeam")
             grookey_health -= 40
         if grookey_health <= 0:
-            audio.play_file('oof.wav', 1)
+            audio.play_file('oof.mp3', 1)
             print("you have no pokemon that can fight")
             sus.exit(':(')
         if eternatus_health <= 0:
@@ -2734,4 +2734,4 @@ while x == 5 and starter == "grookey":
             print("you can't use that you have no more!")
         elif potions <= 0:
             print("you can't use that you have no more!")
-print("that was the end of bootlegmon hope you liked it we might put out a bootlegmon 2 if it gets enough likes credits: hegdehawk11:music adder Carlos:Main Coder Oscar:Beta Tester William:Beta Tester Asher:Alpha Tester")
+print("that was the end of bootlegmon hope you liked it we might put out a bootlegmon 2 if it gets enough likes credits: hedgehawk11:music adder Carlos:Main Coder Oscar:Beta Tester William:Beta Tester Asher:Alpha Tester")
